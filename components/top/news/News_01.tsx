@@ -11,6 +11,7 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import MoreButton from "@/components/ui/button/MoreButton"
 import { blogsFetch } from "@/lib/api/blogsFetch"
+// import ComingSoon from "@/components/coming-soon/ComingSoon"
 import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface NewsProps {
@@ -64,12 +65,29 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
   }, [limit])
 
   if (loading) return <h1>Loading...</h1>
-  if (!contents || contents.length === 0) return <h1>No contents</h1>
+  if (!contents || contents.length === 0)
+    return (
+      <SectionContent className="bg-white">
+        <section className="md:max-w-[1200px] mx-auto">
+          <ContentHeadline
+            enTitle="News"
+            mainTitle="WOOD-SMILEから皆さまへお知らせ"
+          />
+          <p className="py-16 text-2xl md:text-2xl font-medium tracking-wider">
+            Coming Soon...
+          </p>
+        </section>
+      </SectionContent>
+    )
 
   return (
     <SectionContent className="bg-white">
       <section className="md:max-w-[1200px] mx-auto">
-        <ContentHeadline enTitle="News" mainTitle="WOOD-SMILEから皆さまへお知らせ" />
+        <ContentHeadline
+          enTitle="News"
+          mainTitle="WOOD-SMILEから皆さまへお知らせ"
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
           {contents.map((post) => (
             <div key={post.id} className="w-full">
@@ -98,7 +116,10 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
           ))}
         </div>
         <div className="flex justify-center mt-16">
-          <MoreButton className="text-accentColor border-accentColor" />
+          <MoreButton
+            className="text-accentColor border-accentColor"
+            href="/coming-soon"
+          />
         </div>
       </section>
     </SectionContent>
