@@ -30,8 +30,8 @@ const AboutSection_01 = ({
 
   return (
     <>
-      <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 text-white px-5">
-        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em]">
+      <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 px-5">
+        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em] text-accentColor">
           {convertNewLines(title)}
         </h3>
         <div>
@@ -48,7 +48,7 @@ const AboutSection_01 = ({
           {buttonHref && (
             <MoreButton
               href={buttonHref}
-              className="mt-10 text-accentColor border-accentColor"
+              className="mt-16"
             >
               About us
             </MoreButton>
