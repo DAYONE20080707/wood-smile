@@ -16,7 +16,7 @@ const Aside_01 = () => {
           <p className="text-center md:text-[40px] font-medium leading-[150%] tracking-[0.05em] mt-4">
           新たな感動が生まれるステージへ
           </p>
-          <MoreButton className="mt-16" />
+          <MoreButton className="mt-16" href="/coming-soon" />
         </section>
     </>
   );
