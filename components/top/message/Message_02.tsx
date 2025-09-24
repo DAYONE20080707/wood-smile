@@ -12,7 +12,7 @@ const Message_02 = () => {
   return (
     <div className="bg-bgLightBlue pb-[120px]">
       <section className=" mx-auto ">
-        <div className=" mt-16 flex flex-col-reverse md:flex-row md:justify-start md:items-start gap-8 md:gap-0 md:space-x-20">
+        <div className="flex flex-col-reverse md:flex-row md:justify-start md:items-start gap-8 md:gap-0 md:space-x-16">
           <div className="w-full h-full md:w-1/2 relative">
             <Image
               src="/top/initiatives/initiatives.jpg"
@@ -22,14 +22,14 @@ const Message_02 = () => {
               className="object-cover"
             />
           </div>
-          <div className="w-full md:w-[520px] px-5 py-16">
+          <div className="w-full md:w-[560px] px-5 py-16 md:py-[120px]">
             <ContentHeadline
               enTitle="Initiatives"
               mainTitle="環境に優しいビジネスで\n
 あるために\n
 わたしたちがしていること"
               enTitleClassName=""
-              titleClassName="md:text-[36px]"
+              titleClassName="md:!text-[36px] tracking-[0em] leading-[150%]"
             />
             <p className="leading-[250%] text-lg ">
               木質バイオマス発電は、二酸化炭素の排出削減に貢献でき、通常は廃棄物となる未利用間伐材、製材課程で発生する木くずを再利用できることから、循環型社会の構築にも役立てることができると期待されています。

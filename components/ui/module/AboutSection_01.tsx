@@ -31,7 +31,7 @@ const AboutSection_01 = ({
   return (
     <>
       <div className="md:flex items-start justify-between md:max-w-[1240px] mx-auto gap-10 px-5">
-        <h3 className="w-full md:max-w-[500px] text-2xl md:text-[40px] leading-relaxed md:leading-[160%] tracking-[0.03em] text-accentColor">
+        <h3 className="w-full md:max-w-[400px] text-2xl md:text-[40px] leading-[150%] tracking-[0.05em] text-accentColor">
           {convertNewLines(title)}
         </h3>
         <div>

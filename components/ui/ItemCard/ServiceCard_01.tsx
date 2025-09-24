@@ -29,12 +29,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className={classNames("relative overflow-hidden md:flex gap-20", className)}
+      className={classNames("relative overflow-hidden md:flex gap-20 items-center", className)}
     >
       <div
         className={classNames(
           {
-            "h-[250px] md:h-[400px] ": !className.includes("overlay"),
+            "h-[250px] md:h-[351px] ": !className.includes("overlay"),
             "h-[250px] md:h-[600px]": className.includes("overlay"),
           },
           "md:w-1/2 relative rounded-[30px]",
@@ -84,7 +84,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
 
         <div
-          className={classNames("font-light", {
+          className={classNames("font-light leading-[160%]", {
             "text-white  px-10 md:px-20": className.includes("overlay"),
             "text-baseColor": !className.includes("overlay"),
           })}

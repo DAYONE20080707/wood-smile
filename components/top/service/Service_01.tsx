@@ -37,7 +37,7 @@ const Service_01 = () => {
                 description={service.description}
                 image={service.image} // 画像パスを渡す
                 href={service.href} // リンク先を渡す
-                className=" space-y-4"
+                className=" space-y-4 md:space-y-0"
               />
             ))}
           </div>

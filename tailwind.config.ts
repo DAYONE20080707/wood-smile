@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "2xl": "1400px",
+      },
       backgroundImage: {
         "flow-arrow": "url('/flow/arrow-right.svg')",
       },

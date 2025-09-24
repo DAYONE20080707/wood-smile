@@ -16,7 +16,7 @@ const KeyVisual_01 = () => {
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen" />
         </section>
-        <div className="relative  md:md:max-w-[1700px] mx-auto ">
+        <div className="relative  md:md:max-w-[1720px] mx-auto ">
           <TopPageHeadline
             mainTitle={
               <>
@@ -31,7 +31,7 @@ const KeyVisual_01 = () => {
                 将来を見据えた再生エネルギー
               </>
             }
-            className="absolute left-0 bottom-56 md:bottom-[118px] text-white text-left"
+            className="absolute left-0 bottom-56 md:bottom-[100px] text-white text-left"
           />
         </div>
       </FirstViewContent>

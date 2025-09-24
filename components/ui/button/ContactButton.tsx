@@ -14,7 +14,7 @@ const ContactButton = ({
   return (
     <Link
       href="/coming-soon"
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-[200px] px-5 py-4 rounded-full ${
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center w-[200px] px-5 py-[10px] rounded-full ${
         isEnglish ? "font-en text-lg tracking-[0.03em]" : " text-base tracking-[0.05em]"
       } ${className}`}
     >
