@@ -77,15 +77,15 @@ body,
 
 /* Custom Font Classes */
 .font-notoSansJP {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-notoSansJP), "Noto Sans JP", sans-serif;
 }
 
 .font-marcellus {
-  font-family: var(--font-marcellus), serif;
+  font-family: "Marcellus", serif;
 }
 
 .font-en {
-  font-family: var(--font-marcellus), serif;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
 /* swiper */

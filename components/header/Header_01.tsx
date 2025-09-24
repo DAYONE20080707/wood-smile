@@ -10,6 +10,7 @@ import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 import HeaderContent from "../ui/frame/HeaderContent"
 import SnsIconButton from "@/components/ui/button/SnsIconButton"
 import { SnsButton } from "@/components/ui/button/SnsButton"
+import RecruitButton from "../ui/button/RecruitButton"
 
 const Header_01 = () => {
   const { companyName } = CompanyInfo[0]
@@ -46,14 +47,14 @@ const Header_01 = () => {
 
   return (
     <div className="">
-      <HeaderContent className="max-w-[1360px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
+      <HeaderContent className="max-w-[1840px] fixed top-[15px] left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
         <div
-          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:p-5 rounded-[10px] transition-all duration-300 ${
+          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:p-5 rounded-full transition-all duration-300 ${
             isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
           }`}
         >
           {/* ロゴ */}
-          <Link href="/" className="w-[150px] md:w-[200px]">
+          <Link href="/" className="w-[150px] md:w-[166px]">
             <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("primary")}
             </div>
@@ -64,24 +65,29 @@ const Header_01 = () => {
             {filteredMenu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
-                  <div>{item.name}</div>
+                  <div>{item.nameJa}</div>
                 </Link>
               </li>
             ))}
             <div className="flex items-center ">
-              {SnsButton.slice(0, 3).map((sns, index) => (
+              {SnsButton.slice(0, 4).map((sns, index) => (
                 <SnsIconButton
                   key={index}
                   href={sns.href}
-                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
+                  src={sns.src_w}
                   alt={sns.name}
                   className="text-white hover:text-accentColor transition-colors duration-200"
                 />
               ))}
             </div>
-            <li className="">
-              <ContactButton className="" />
-            </li>
+            <ul className="flex gap-2">
+              <li className="">
+                <ContactButton className="" >お問い合わせ</ContactButton>
+              </li>
+              <li className="">
+                <RecruitButton className="" >採用情報</RecruitButton>
+              </li>
+            </ul>
           </ul>
 
           {/* ハンバーガーメニューボタン */}
