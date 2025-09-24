@@ -5,6 +5,7 @@ import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
 import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01";
 import { serviceData } from "@/components/data/top/ServiceData";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 const Service_01 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
@@ -17,7 +18,7 @@ const Service_01 = () => {
 
   return (
     <>
-      <PageContent>
+      <SectionContent className="bg-bgLightBlue">
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
             enTitle="Service"
@@ -41,7 +42,7 @@ const Service_01 = () => {
             ))}
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

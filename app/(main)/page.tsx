@@ -70,6 +70,7 @@ const HomePage = () => {
       <KeyVisual_01 />
       <About_01 />
       <Service_01 />
+      <News_01/>
       <Message_02 />
       <Aside_01 />
     </div>
