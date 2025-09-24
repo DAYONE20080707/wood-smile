@@ -11,6 +11,8 @@ import HeaderContent from "../ui/frame/HeaderContent"
 import SnsIconButton from "@/components/ui/button/SnsIconButton"
 import { SnsButton } from "@/components/ui/button/SnsButton"
 import RecruitButton from "../ui/button/RecruitButton"
+import ContactButtonHeader from "../ui/button/ContactButtonHeader"
+import RecruitButtonHeader from "../ui/button/RecruitButtonHeader"
 
 const Header_01 = () => {
   const { companyName } = CompanyInfo[0]
@@ -82,10 +84,10 @@ const Header_01 = () => {
             </div>
             <ul className="flex gap-2">
               <li className="">
-                <ContactButton className="" >お問い合わせ</ContactButton>
+                <ContactButtonHeader className="" >お問い合わせ</ContactButtonHeader>
               </li>
               <li className="">
-                <RecruitButton className="" >採用情報</RecruitButton>
+                <RecruitButtonHeader className="" >採用情報</RecruitButtonHeader>
               </li>
             </ul>
           </ul>

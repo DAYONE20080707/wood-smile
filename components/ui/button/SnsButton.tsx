@@ -15,7 +15,7 @@ export const SnsButton = [
   {
     name: "X",
     href: "/",
-    src: "/sns/x.svg",
+    src: "/sns/x_w.svg",
     src_w: "/sns/x_w.svg",
   },
   {

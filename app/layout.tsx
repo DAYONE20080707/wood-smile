@@ -22,11 +22,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | チョイスWeb制作",
-    default: "チョイスのWeb制作は",
+    template: "%s | 合同会社WOOD-SMILE",
+    default: "合同会社WOOD-SMILE",
   },
   icons: {
-    icon: "/common/favicon.ico",
+    icon: "/favicon.ico",
   },
 }
 
