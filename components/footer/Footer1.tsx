@@ -72,7 +72,7 @@ const Footer1 = () => {
             ))}
           </ul>
         </div>
-        <small className="mt-6 flex justify-end items-center md:text-base">
+        <small className="mt-6 flex justify-start md:justify-end items-center md:text-base">
           ©合同会社WOOD-SMILE. ALL Rights Reserved.
         </small>
       </div>

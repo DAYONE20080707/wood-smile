@@ -21,7 +21,7 @@ const About_01 = () => {
             mainTitle=""
             enTitleClassName=""
             titleClassName=""
-            className = "mb-10"
+            className = "mb-4 md:mb-10"
           />
         </section>
         <AboutSection

@@ -48,7 +48,7 @@ const AboutSection_01 = ({
           {buttonHref && (
             <MoreButton
               href={buttonHref}
-              className="mt-16"
+              className="mt-10 md:mt-16"
             >
               About us
             </MoreButton>

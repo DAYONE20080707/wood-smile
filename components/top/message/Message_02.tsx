@@ -12,8 +12,8 @@ const Message_02 = () => {
   return (
     <div className="bg-bgLightBlue pb-[120px]">
       <section className=" mx-auto ">
-        <div className=" mt-16 flex justify-start items-center space-x-20">
-          <div className="w-1/2 relative">
+        <div className=" mt-16 flex flex-col-reverse md:flex-row md:justify-start md:items-start gap-8 md:gap-0 md:space-x-20">
+          <div className="w-full h-full md:w-1/2 relative">
             <Image
               src="/top/initiatives/initiatives.jpg"
               alt="message"
@@ -22,7 +22,7 @@ const Message_02 = () => {
               className="object-cover"
             />
           </div>
-          <div className="w-[520px]">
+          <div className="w-full md:w-[520px] px-5 py-16">
             <ContentHeadline
               enTitle="Initiatives"
               mainTitle="環境に優しいビジネスで\n
@@ -32,7 +32,7 @@ const Message_02 = () => {
               titleClassName="md:text-[36px]"
             />
             <p className="leading-[250%] text-lg ">
-            木質バイオマス発電は、二酸化炭素の排出削減に貢献でき、通常は廃棄物となる未利用間伐材、製材課程で発生する木くずを再利用できることから、循環型社会の構築にも役立てることができると期待されています。
+              木質バイオマス発電は、二酸化炭素の排出削減に貢献でき、通常は廃棄物となる未利用間伐材、製材課程で発生する木くずを再利用できることから、循環型社会の構築にも役立てることができると期待されています。
             </p>
             <MoreLinkButton href="/coming-soon" className="mt-16" />
           </div>

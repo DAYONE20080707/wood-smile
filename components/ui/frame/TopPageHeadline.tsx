@@ -48,7 +48,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "text-3xl font-semibold md:text-[80px] md:leading-[110%] font-en tracking-[0.03em] md:tracking-[4px]",
+          "text-[40px] font-semibold md:text-[80px] md:leading-[110%] font-en tracking-[0.03em] md:tracking-[4px]",
           titleClassName
         )}
       >

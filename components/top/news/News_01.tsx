@@ -88,10 +88,10 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
           mainTitle="WOOD-SMILEから皆さまへお知らせ"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {contents.map((post) => (
             <div key={post.id} className="w-full">
-              <div className="w-full h-[250px] mt-5 md:mt-0 rounded-t-2xl overflow-hidden">
+              <div className="w-full h-[250px] rounded-t-2xl overflow-hidden">
                 {post.image && (
                   <Image
                     src={post.image.url}
