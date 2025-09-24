@@ -21,12 +21,12 @@ const Service_01 = () => {
         <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
             enTitle="Service"
-            mainTitle="事業内容"
-            enTitleClassName="text-center"
-            titleClassName="text-center"
+            mainTitle="街と森と電気。\n再生可能エネルギーで共に生きる"
+            enTitleClassName=""
+            titleClassName=""
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 gap-16">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}

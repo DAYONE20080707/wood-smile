@@ -16,6 +16,15 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   ImageHeight,
   id,
 }) => {
+  // 文字列内の\nを<br />に変換する関数
+  const convertNewLines = (text: string) => {
+    return text.split("\\n").map((line, i) => (
+      <span key={i}>
+        {line}
+        {i !== text.split("\\n").length - 1 && <br />}
+      </span>
+    ))
+  }
   return (
     <section
       id={id}
@@ -47,7 +56,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
           enTitleClassName
         )}
       >
-        {mainTitle}
+        {typeof mainTitle === "string" ? convertNewLines(mainTitle) : mainTitle}
       </h2>
 
       {subTitle && <h2>{subTitle}</h2>}
