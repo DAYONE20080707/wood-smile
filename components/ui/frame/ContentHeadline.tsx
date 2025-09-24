@@ -45,7 +45,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       <p
         className={classNames(
           "text-sm md:text-lg font-semibold font-en tracking-[0.03em] text-lightGreen",
-          titleClassName
+          enTitleClassName
         )}
       >
         {enTitle}
@@ -53,7 +53,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       <h2
         className={classNames(
           "text-[40px] leading-[150%] mt-1 tracking-[0.05em] text-accentColor",
-          enTitleClassName
+          titleClassName
         )}
       >
         {typeof mainTitle === "string" ? convertNewLines(mainTitle) : mainTitle}

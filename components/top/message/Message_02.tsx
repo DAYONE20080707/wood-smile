@@ -1,50 +1,45 @@
 // components/message/Message_02.tsx
 
-"use client";
+"use client"
 
-import MoreLinkButton from "@/components/ui/button/MoreButton";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
-import Image from "next/image";
+import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
+import Image from "next/image"
 
 // メッセージ
 const Message_02 = () => {
   return (
-    <>
-      <PageContent>
-        {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:max-w-[1200px] mx-auto ">
-          <ContentHeadline
-            enTitle="Who we are"
-            mainTitle="私たちについて"
-            enTitleClassName="text-center"
-            titleClassName="text-center"
-          />
-          <div className=" mt-16 flex justify-start space-x-20">
-            <div className=" w-[520px] h-[767px] relative">
-              <Image
-                src="/top/message/message_img.png"
-                alt="message"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="w-[600px]">
-              <h3 className="text-5xl ">見出しテキスト</h3>
-              <p>
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-              </p>
-              <MoreLinkButton href="/" />
-            </div>
+    <div className="bg-bgLightBlue pb-[120px]">
+      <section className=" mx-auto ">
+        <div className=" mt-16 flex justify-start items-center space-x-20">
+          <div className="w-1/2 relative">
+            <Image
+              src="/top/initiatives/initiatives.jpg"
+              alt="message"
+              width={960}
+              height={811}
+              className="object-cover"
+            />
           </div>
-        </section>
-      </PageContent>
-    </>
-  );
-};
+          <div className="w-[520px]">
+            <ContentHeadline
+              enTitle="Initiatives"
+              mainTitle="環境に優しいビジネスで\n
+あるために\n
+わたしたちがしていること"
+              enTitleClassName=""
+              titleClassName="md:text-[36px]"
+            />
+            <p className="leading-[250%] text-lg ">
+            木質バイオマス発電は、二酸化炭素の排出削減に貢献でき、通常は廃棄物となる未利用間伐材、製材課程で発生する木くずを再利用できることから、循環型社会の構築にも役立てることができると期待されています。
+            </p>
+            <MoreLinkButton href="/coming-soon" className="mt-16" />
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
 
-export default Message_02;
+export default Message_02
