@@ -18,20 +18,24 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "2xl": "1400px",
+      },
       backgroundImage: {
         "flow-arrow": "url('/flow/arrow-right.svg')",
       },
       fontFamily: {
         marcellus: ["Marcellus", "serif"],
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
-        en: ["Marcellus", "serif"],
+        en: ["Poppins", "sans-serif"],
       },
       colors: {
-        accentColor: "#F2A629",
-        baseColor: "#393939",
+        accentColor: "#009789",
+        lightGreen: "#8BC34A",
+        baseColor: "#142B3A",
         borderGray: "#393939",
         bgBlack: "#333333",
-        bgLightBlue: "#f7fcff",
+        bgLightBlue: "#F1F4F8",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

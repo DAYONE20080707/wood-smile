@@ -12,10 +12,6 @@ import Message_01 from "@/components/about/message/Message_01"
 import Message_02 from "@/components/about/message/Message_02"
 import Message_03 from "@/components/about/message/Message_03"
 import Message_04 from "@/components/about/message/Message_04"
-import Profile_01 from "@/components/top/profile/Profile_01"
-import Profile_02 from "@/components/top/profile/Profile_02"
-import Profile_03 from "@/components/top/profile/Profile_03"
-import Profile_04 from "@/components/top/profile/Profile_04"
 
 // 私たちについて
 const AboutPage = () => {
@@ -26,7 +22,6 @@ const AboutPage = () => {
       <Purpose_01 />
       <History_01 />
       <Message_01 />
-      <Profile_01 />
     </div>
   )
 }

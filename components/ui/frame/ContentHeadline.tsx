@@ -16,11 +16,20 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   ImageHeight,
   id,
 }) => {
+  // 文字列内の\nを<br />に変換する関数
+  const convertNewLines = (text: string) => {
+    return text.split("\\n").map((line, i) => (
+      <span key={i}>
+        {line}
+        {i !== text.split("\\n").length - 1 && <br />}
+      </span>
+    ))
+  }
   return (
     <section
       id={id}
       className={classNames(
-        "w-full md:max-w-[1200px] mb-16 tracking-wide text-accentColor",
+        "w-full md:max-w-[1200px] mb-16 tracking-wide",
         className
       )}
     >
@@ -33,22 +42,22 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
           className="mb-4"
         />
       )}
-      <h1
+      <p
         className={classNames(
-          "text-sm md:text-lg font-semibold",
-          titleClassName
-        )}
-      >
-        {mainTitle}
-      </h1>
-      <h3
-        className={classNames(
-          "text-[40px] font-en leading-[120%] mt-1",
+          "text-sm md:text-lg font-semibold font-en tracking-[0.03em] text-lightGreen",
           enTitleClassName
         )}
       >
         {enTitle}
-      </h3>
+      </p>
+      <h2
+        className={classNames(
+          "text-2xl md:text-[40px] leading-[150%] mt-4 tracking-[0.05em] text-accentColor",
+          titleClassName
+        )}
+      >
+        {typeof mainTitle === "string" ? convertNewLines(mainTitle) : mainTitle}
+      </h2>
 
       {subTitle && <h2>{subTitle}</h2>}
     </section>

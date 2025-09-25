@@ -37,7 +37,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
     <div
       id={id}
       className={classNames(
-        "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
+        "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden bg-bgLightBlue",
         className
       )}
       style={getVariantStyle()}

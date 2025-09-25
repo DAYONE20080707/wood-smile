@@ -17,7 +17,7 @@ const PageContent: React.FC<PageContentProps> = ({
   return (
     <div
       className={classNames(
-        " mx-auto py-14 md:py-[120px] px-4 md:px-0",
+        " mx-auto py-14 md:py-[118px] px-4 md:px-0",
         className
       )}
       style={style}

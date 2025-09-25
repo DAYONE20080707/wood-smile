@@ -2,6 +2,7 @@
 import Image from "next/image"
 import classNames from "classnames"
 import ArrowRightLinkButton from "@/components/ui/button/ArroeRightLinkButton"
+import MoreLinkButton from "../button/MoreButton"
 
 interface ServiceCardProps {
   id: number
@@ -27,14 +28,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   showButton = true, // デフォルトでボタンを表示する設定
 }) => {
   return (
-    <div className={classNames("relative overflow-hidden", className)}>
+    <div
+      className={classNames("relative overflow-hidden md:flex gap-20 items-center", className)}
+    >
       <div
         className={classNames(
           {
-            "h-[250px] md:h-[400px] ": !className.includes("overlay"),
+            "h-[250px] md:h-[351px] ": !className.includes("overlay"),
             "h-[250px] md:h-[600px]": className.includes("overlay"),
           },
-          "w-full aspect-[1/1] relative rounded-[30px]",
+          "md:w-1/2 relative rounded-[30px]",
           imageContainerClass
         )}
       >
@@ -49,46 +52,55 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       <div
-        className={classNames("space-y-3 ", {
-          "w-full md:h-[600px]  rounded-[30px] absolute inset-0 flex flex-col justify-center items-center bg-black/50 text-white":
+        className={classNames("space-y-6 ", {
+          " md:h-[600px]  rounded-[30px] absolute inset-0 flex flex-col justify-center items-center bg-black/50 text-white":
             className.includes("overlay"),
-          "relative text-black ": !className.includes("overlay"),
+          "md:w-1/2 relative text-black ": !className.includes("overlay"),
         })}
       >
-        <div
-          className={classNames("font-bold text-[16px] font-poppins text-left text-accentColor ", {
-            "text-white": className.includes("overlay"),
-            "text-accentColor": !className.includes("overlay"),
-          })}
-        >
-          {subTitle}
+        <div>
+          <div
+            className={classNames(
+              "font-bold text-[16px] font-en text-left text-accentColor ",
+              {
+                "text-white": className.includes("overlay"),
+                "text-accentColor": !className.includes("overlay"),
+              }
+            )}
+          >
+            {subTitle}
+          </div>
+          <div
+            className={classNames(
+              "mt-1 font-medium text-[22px] text-left pb-6 border-b border-borderGray",
+              {
+                "text-white": className.includes("overlay"),
+                "text-baseColor": !className.includes("overlay"),
+              }
+            )}
+          >
+            {title}
+          </div>
         </div>
+
         <div
-          className={classNames("font-medium text-[22px] font-poppins text-left  ", {
-            "text-white": className.includes("overlay"),
-            "text-baseColor": !className.includes("overlay"),
-          })}
-        >
-          {title}
-        </div>
-        <div
-          className={classNames("font-light",{
+          className={classNames("font-light leading-[160%]", {
             "text-white  px-10 md:px-20": className.includes("overlay"),
             "text-baseColor": !className.includes("overlay"),
           })}
         >
           {description}
         </div>
-        {showButton && ( // showButtonがtrueの場合のみ表示
-          <div
-            className={classNames({
-              hidden: className.includes("overlay"),
-              "text-black": !className.includes("overlay"),
-            })}
-          >
-            <ArrowRightLinkButton href={href} label="" />
-          </div>
-        )}
+        <div
+          className={classNames({
+            hidden: className.includes("overlay"),
+            "text-black": !className.includes("overlay"),
+          })}
+        >
+          <MoreLinkButton href={href} className="mt-6">
+            View more
+          </MoreLinkButton>
+        </div>
       </div>
     </div>
   )

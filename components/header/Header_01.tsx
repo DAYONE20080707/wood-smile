@@ -10,6 +10,9 @@ import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
 import HeaderContent from "../ui/frame/HeaderContent"
 import SnsIconButton from "@/components/ui/button/SnsIconButton"
 import { SnsButton } from "@/components/ui/button/SnsButton"
+import RecruitButton from "../ui/button/RecruitButton"
+import ContactButtonHeader from "../ui/button/ContactButtonHeader"
+import RecruitButtonHeader from "../ui/button/RecruitButtonHeader"
 
 const Header_01 = () => {
   const { companyName } = CompanyInfo[0]
@@ -46,42 +49,56 @@ const Header_01 = () => {
 
   return (
     <div className="">
-      <HeaderContent className="max-w-[1360px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
+      <HeaderContent className="max-w-[1840px] fixed top-[15px] left-1/2 transform -translate-x-1/2 z-10 text-white w-full transition-all duration-300 rounded-[10px]">
         <div
-          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:p-5 rounded-[10px] transition-all duration-300 ${
+          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:px-10 md:py-5 2xl:px-10 rounded-full transition-all duration-300 ${
             isScrolled ? "bg-gray-800 bg-opacity-30" : "bg-transparent"
           }`}
         >
           {/* ロゴ */}
-          <Link href="/" className="w-[150px] md:w-[200px]">
+          <Link href="/" className="w-[150px] md:w-[166px]">
             <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("primary")}
             </div>
           </Link>
 
           {/* デスクトップ用メニュー */}
-          <ul className="hidden md:flex items-center space-x-10 ml-10 font-en tracking-[0.03em]">
-            {filteredMenu.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href}>
-                  <div>{item.name}</div>
-                </Link>
-              </li>
-            ))}
-            <div className="flex items-center ">
-              {SnsButton.slice(0, 3).map((sns, index) => (
-                <SnsIconButton
-                  key={index}
-                  href={sns.href}
-                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
-                  alt={sns.name}
-                  className="text-white hover:text-accentColor transition-colors duration-200"
-                />
+          <ul className="hidden md:flex flex-col 2xl:flex-row items-end 2xl:items-center space-x-10 gap-4  ml-10 font-en tracking-[0.03em]">
+            <ul className="flex items-center space-x-10">
+              {filteredMenu.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href}>
+                    <div>{item.nameJa}</div>
+                  </Link>
+                </li>
               ))}
+            </ul>
+
+            <div className="flex items-center space-x-10">
+              <div className="flex items-center ">
+                {SnsButton.slice(0, 4).map((sns, index) => (
+                  <SnsIconButton
+                    key={index}
+                    href={sns.href}
+                    src={sns.src_w}
+                    alt={sns.name}
+                    className="text-white hover:text-accentColor transition-colors duration-200"
+                  />
+                ))}
+              </div>
+              <ul className="flex gap-2">
+                <li className="">
+                  <ContactButtonHeader className="">
+                    お問い合わせ
+                  </ContactButtonHeader>
+                </li>
+                <li className="">
+                  <RecruitButtonHeader className="">
+                    採用情報
+                  </RecruitButtonHeader>
+                </li>
+              </ul>
             </div>
-            <li className="">
-              <ContactButton className="" />
-            </li>
           </ul>
 
           {/* ハンバーガーメニューボタン */}

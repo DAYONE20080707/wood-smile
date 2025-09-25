@@ -14,34 +14,24 @@ const KeyVisual_01 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section>
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-screen md:h-[810px]" />
+          <KeyVisualContent className="h-screen" />
         </section>
-        <div className="relative  md:md:max-w-[1200px] mx-auto ">
+        <div className="relative  md:md:max-w-[1720px] mx-auto ">
           <TopPageHeadline
-            subtitleTop={
-              <>
-                <span>Optimal SolutionSolution</span>
-                <br />
-                <span>For your Company</span>
-              </>
-            }
             mainTitle={
               <>
                 <span>
-                  常にベストな
-                  <br className="block md:hidden" />
-                  決断を
+                Biomass Power Generation<br/>
+                for the Furture
                 </span>
               </>
             }
             subtitleBottom={
               <>
-                1,000社以上の実績で御社の決算も安心して
-                <br className="block md:hidden" />
-                お任せください
+                将来を見据えた再生エネルギー
               </>
             }
-            className="absolute left-0 bottom-56 md:bottom-64 text-white text-left"
+            className="absolute left-0 bottom-56 md:bottom-[100px] text-white text-left"
           />
         </div>
       </FirstViewContent>

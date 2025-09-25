@@ -2,23 +2,25 @@
 export const Menu = [
   {
     name: "Our Service",
-    nameJa: "事業内容",
-    href: "/#service",
+    nameJa: "事業紹介",
+    href: "/coming-soon",
   },
   {
     name: "About  us",
     nameJa: "会社概要",
-    href: "/#about",
+    href: "/coming-soon",
   },
 
-  // {
-  //   name: '料金プラン',
-  //   href: '/#plan',
-  // },
-  // {
-  //   name: 'お問い合わせ',
-  //   href: '/contact',
-  // },
+  {
+    name: "Company Initiatives",
+    nameJa: "会社の取り組み",
+    href: "/coming-soon",
+  },
+  {
+    name: "News",
+    nameJa: "お知らせ",
+    href: "/coming-soon",
+  },
   // {
   //   name: 'Case study',
   //   href: '/#casestudy',
