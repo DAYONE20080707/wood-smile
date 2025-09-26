@@ -13,7 +13,7 @@ const Aside_01 = () => {
           <h4 className="text-sm md:text-lg font-en font-semibold tracking-[0.03em]">
           Recruit
           </h4>
-          <p className="text-center md:text-[40px] font-medium leading-[150%] tracking-[0.05em] mt-4">
+          <p className="text-center text-xl md:text-[40px] font-medium leading-[150%] tracking-[0.05em] mt-4">
           新たな感動が生まれるステージへ
           </p>
           <MoreButton className="mt-16" href="/coming-soon" />
