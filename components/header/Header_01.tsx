@@ -63,7 +63,7 @@ const Header_01 = () => {
           </Link>
 
           {/* デスクトップ用メニュー */}
-          <ul className="hidden md:flex flex-col items-end space-x-10 gap-4  ml-10 font-en tracking-[0.03em]">
+          <ul className="hidden md:flex items-center flex-wrap gap-10  ml-10 font-en tracking-[0.03em]">
             <ul className="flex items-center space-x-10">
               {filteredMenu.map((item, index) => (
                 <li key={index}>
@@ -74,8 +74,8 @@ const Header_01 = () => {
               ))}
             </ul>
 
-            <div className="flex items-center space-x-10">
-              <div className="flex items-center ">
+            <div className="flex items-center">
+              {/* <div className="flex items-center ">
                 {SnsButton.slice(0, 4).map((sns, index) => (
                   <SnsIconButton
                     key={index}
@@ -85,7 +85,7 @@ const Header_01 = () => {
                     className="text-white hover:text-accentColor transition-colors duration-200"
                   />
                 ))}
-              </div>
+              </div> */}
               <ul className="flex gap-2">
                 <li className="">
                   <ContactButtonHeader className="">
@@ -157,7 +157,7 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
-            <div className="flex items-center ">
+            {/* <div className="flex items-center ">
               {SnsButton.slice(0, 3).map((sns, index) => (
                 <SnsIconButton
                   key={index}
@@ -167,7 +167,7 @@ const Header_01 = () => {
                   className="text-white hover:text-accentColor transition-colors duration-200"
                 />
               ))}
-            </div>
+            </div> */}
             {/* ContactButton */}
             <li>
               <ContactButton className="w-full py-4 font-normal" />
