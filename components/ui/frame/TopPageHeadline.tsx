@@ -29,7 +29,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   return (
     <section
       className={classNames(
-        "md:md:max-w-[1700px] w-full px-4 md:px-0",
+        "md:md:max-w-[1240px] w-full px-4 md:px-5",
         className
       )}
     >

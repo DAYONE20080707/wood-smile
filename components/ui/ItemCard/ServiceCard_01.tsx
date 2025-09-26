@@ -27,9 +27,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageContainerClass = "",
   showButton = true, // デフォルトでボタンを表示する設定
 }) => {
+  // 文字列内の\nを<br />に変換する関数
+  const convertNewLines = (text: string) => {
+    return text.split("\\n").map((line, i) => (
+      <span key={i}>
+        {line}
+        {i !== text.split("\\n").length - 1 && <br />}
+      </span>
+    ))
+  }
   return (
     <div
-      className={classNames("relative overflow-hidden md:flex gap-20 items-center", className)}
+      className={classNames(
+        "relative overflow-hidden md:flex gap-20 items-center",
+        className
+      )}
     >
       <div
         className={classNames(
@@ -89,7 +101,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             "text-baseColor": !className.includes("overlay"),
           })}
         >
-          {description}
+          {convertNewLines(description)}
         </div>
         <div
           className={classNames({

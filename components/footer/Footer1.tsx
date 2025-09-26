@@ -44,24 +44,7 @@ const Footer1 = () => {
             </div>
           </div>
         </div>
-        <div className="md:flex justify-between items-center !border-t border-white mt-6 pt-6">
-          <ul className="flex items-center justify-start font-semibold  space-x-5 md:space-x-0">
-            {Sns.map((item, index) => (
-              <li
-                key={index}
-                className="w-5 h-5 md:w-[60px] md:h-[60px] flex items-center justify-center"
-              >
-                <Link href={item.href} className="">
-                  <Image
-                    src={item.src}
-                    alt={item.name}
-                    width={30}
-                    height={30}
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="md:flex justify-end items-center !border-t border-white mt-6 pt-6">
           <ul className="md:flex items-center md:space-x-10 font-light mt-5 md:mt-0 space-y-5 md:space-y-0">
             {FooterLinks.map((item, index) => (
               <li key={index}>
