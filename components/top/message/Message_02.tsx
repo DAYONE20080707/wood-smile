@@ -12,7 +12,7 @@ const Message_02 = () => {
   return (
     <div className="bg-bgLightBlue pb-[120px]">
       <section className=" mx-auto ">
-        <div className="flex flex-col-reverse md:flex-row md:justify-start md:items-start gap-8 md:gap-0 md:space-x-16">
+        <div className="flex flex-col md:flex-row md:justify-start md:items-start md:space-x-16">
           <div className="w-full h-full md:w-1/2 relative">
             <Image
               src="/top/initiatives/initiatives.jpg"
