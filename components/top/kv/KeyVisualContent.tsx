@@ -12,9 +12,7 @@ interface KeyVisualContentProps {
 const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = [
-    { src: "/top/kv/kv_img.jpg", alt: "KV Image 1" },
-  ]
+  const slides = [{ src: "/top/kv/kv.mp4", alt: "KV" }]
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -33,15 +31,26 @@ const KeyVisualContent: React.FC<KeyVisualContentProps> = ({ className }) => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            priority={index === 0}
-            fill
-            className="object-cover"
-          />
+          {slide.src.endsWith(".mp4") ? (
+            <video
+              src={slide.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              priority={index === 0}
+              fill
+              className="object-cover"
+            />
+          )}
           {/* 黒20%のグラデーションオーバーレイ */}
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-black/20"></div> */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-black/20"></div>
         </div>
       ))}
     </div>

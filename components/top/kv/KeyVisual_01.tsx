@@ -28,7 +28,7 @@ const KeyVisual_01 = () => {
             }
             subtitleBottom={
               <>
-                将来を見据えた再生エネルギー
+                将来を見据えた再生可能エネルギー
               </>
             }
             className="absolute left-0 bottom-56 md:bottom-[100px] text-white text-left"
